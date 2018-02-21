@@ -7,11 +7,17 @@
  *
  * @see <a href="https://cs125.cs.illinois.edu/lab/8/">Lab 8 Description</a>
  */
-public class Bank {
+public final class Bank {
 
-    public String bankName;
+    /**
+     * dgjsdog.
+     */
+    private String bankName;
 
-    public Bank() {
+    /**
+     * lkfnsdovnsod.
+     */
+    private Bank() {
         bankName = "Illini Bank";
     }
 
@@ -26,9 +32,15 @@ public class Bank {
      * @return boolean
      */
     public boolean withdrawMoney(final BankAccount bankAccount, final double amount) {
-        /*
-         * Implement this function
-         */
+        BankAccount accountBefore = new BankAccount("",);
+        BankAccount accountAfter = new BankAccount("",);
+        accountBefore.accountBalance = bankAccount.accountBalance;
+        bankAccount.accountBalance -= amount;
+        accountAfter.accountBalance = bankAccount.accountBalance;
+        if (accountBefore.accountBalance == accountAfter.accountBalance) {
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -42,9 +54,7 @@ public class Bank {
      * @return boolean
      */
     public boolean depositMoney(final BankAccount bankAccount, final double amount) {
-        /*
-         * Implement this function
-         */
+
     }
 
     /**
